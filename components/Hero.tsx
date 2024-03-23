@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen lg:items-start lg:h-auto lg:absolute lg:bottom-0 lg:w-full">
+    <div className="flex flex-col items-center justify-center h-svh lg:items-start lg:h-auto lg:absolute lg:bottom-0 lg:w-full">
       <div className="mb-8 text-center text-white lg:text-left lg:pl-20">
         <h1 className="mb-6 text-5xl uppercase lg:text-9xl lg:-ml-2">
           po tijelu

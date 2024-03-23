@@ -17,7 +17,7 @@ export default function Button({
     <a
       href={link}
       className={cn(
-        "bg-gray-500 py-2 px-4 lg:py-4 lg:px-8 text-white text-xl lg:text-3xl uppercase flex gap-2 items-center",
+        "bg-gray-500 py-2 px-4 lg:py-4 lg:px-8 text-white text-lg lg:text-3xl uppercase flex gap-2 items-center",
         className
       )}
       target="_blank"

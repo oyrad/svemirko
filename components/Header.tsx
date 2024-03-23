@@ -53,7 +53,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "flex justify-between text-white items-center px-6 lg:px-20 py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
+        "flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
         visible && prevScrollPosition > 250 && "bg-black",
         !visible && "-translate-y-full"
       )}
@@ -93,7 +93,7 @@ export default function Header() {
         onClick={() => setIsExpanded(true)}
       />
       {isExpanded && (
-        <nav className="absolute top-0 left-0 w-full p-6 text-black bg-white lg:hidden h-fit">
+        <nav className="absolute top-0 left-0 w-full px-6 py-4 text-black bg-white lg:hidden h-fit">
           <div className="flex items-center justify-between mb-8">
             <Image
               src={logoBlack}

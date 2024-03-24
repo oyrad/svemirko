@@ -16,6 +16,12 @@ export default function Header() {
   const [isScrollingDueToClick, setIsScrollingDueToClick] = useState(false);
 
   useEffect(() => {
+    if (window.scrollY > 10) {
+      setVisible(false);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (isExpanded || isScrollingDueToClick) return;
 
@@ -54,7 +60,7 @@ export default function Header() {
     <header
       className={cn(
         "flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
-        visible && prevScrollPosition > 250 && "bg-black",
+        prevScrollPosition > 50 && "bg-black",
         !visible && "-translate-y-full"
       )}
     >
@@ -62,10 +68,10 @@ export default function Header() {
         src={logoWhite}
         alt="svemirko logo"
         onClick={scrollToTop}
-        className="cursor-pointer"
+        className="w-16 cursor-pointer lg:w-24"
       />
       <nav className="hidden lg:block">
-        <ul className="flex space-x-12 text-4xl uppercase">
+        <ul className="flex space-x-12 text-3xl uppercase">
           <li
             className="cursor-pointer"
             onClick={() => scrollToSection("tourDates")}
@@ -99,7 +105,7 @@ export default function Header() {
               src={logoBlack}
               alt="svemirko logo"
               onClick={scrollToTop}
-              className="cursor-pointer"
+              className="w-16 cursor-pointer"
             />
             <Image
               src={x}

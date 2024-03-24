@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="lg:mt-[100vh]">
+      <div>
         <TourDates />
         <Music />
         <Contact />

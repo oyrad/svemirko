@@ -60,32 +60,32 @@ export default function Header() {
     <header
       className={cn(
         "flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
-        prevScrollPosition > 50 && "bg-black",
+        prevScrollPosition > 50 && visible && "bg-white shadow-md",
         !visible && "-translate-y-full"
       )}
     >
       <Image
-        src={logoWhite}
+        src={logoBlack}
         alt="svemirko logo"
         onClick={scrollToTop}
         className="w-16 cursor-pointer lg:w-24"
       />
       <nav className="hidden lg:block">
-        <ul className="flex gap-8 text-3xl uppercase">
+        <ul className="flex gap-8 text-3xl font-semibold uppercase">
           <li
-            className="px-4 py-2 transition-all duration-100 cursor-pointer hover:text-black hover:bg-white"
+            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
             onClick={() => scrollToSection("tourDates")}
           >
             tour
           </li>
           <li
-            className="px-4 py-2 transition-all duration-100 cursor-pointer hover:text-black hover:bg-white"
+            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
             onClick={() => scrollToSection("music")}
           >
             glazba
           </li>
           <li
-            className="px-4 py-2 transition-all duration-100 cursor-pointer hover:text-black hover:bg-white"
+            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
             onClick={() => scrollToSection("contact")}
           >
             kontakt

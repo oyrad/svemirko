@@ -18,18 +18,24 @@ export default function Music() {
       <div className="flex flex-col items-center justify-between gap-12 p-20 lg:gap-0 lg:flex-row">
         <p className="text-6xl uppercase lg:text-8xl">glazba</p>
         <div className="flex gap-12 lg:gap-20">
-          <a href="https://jasamsvemirko.bandcamp.com/" target="_blank">
+          <a
+            href="https://jasamsvemirko.bandcamp.com/"
+            target="_blank"
+            className="duration-200 hover:scale-110 transform-all"
+          >
             <Image src={bandcamp} alt="bandcamp" />
           </a>
           <a
             href="https://open.spotify.com/artist/7f3cnDkg5S64e0adAlnF5z"
             target="_blank"
+            className="duration-200 hover:scale-110 transform-all"
           >
             <Image src={spotify} alt="spotify" />
           </a>
           <a
             href="https://www.youtube.com/@visemanjezauvijek/search?query=svemirko"
             target="_blank"
+            className="duration-200 hover:scale-110 transform-all"
           >
             <Image src={youtube} alt="youtube" />
           </a>

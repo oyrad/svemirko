@@ -33,7 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(victorMono.className, "bg-black text-white")}>
+      <body
+        className={cn(
+          victorMono.className,
+          "bg-black text-white hide-scrollbar"
+        )}
+      >
         <Header />
         {children}
         <Footer />

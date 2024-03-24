@@ -1,12 +1,12 @@
 import { Gig, gigs } from "@/data/gigs";
+import marko from "@/public/images/marko.jpg";
+import Image from "next/image";
 
 export default function TourDates() {
   return (
-    <section className="mb-20" id="tourDates">
-      <div className="flex items-center justify-center mb-20 bg-gray-500 h-80">
-        SLIKA
-      </div>
-      <div className="px-8 lg:text-center lg:px-0">
+    <section id="tourDates">
+      <Image src={marko} alt="marko" className="w-full mb-12" />
+      <div className="px-8 pb-20 lg:text-center lg:px-0 tour-gradient">
         <p className="mb-12 text-7xl lg:text-9xl">
           Tour <br /> 2024
         </p>

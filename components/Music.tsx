@@ -27,12 +27,15 @@ export default function Music() {
           >
             <Image src={spotify} alt="spotify" />
           </a>
-          <a href="https://youtube.com" target="_blank">
+          <a
+            href="https://www.youtube.com/@visemanjezauvijek/search?query=svemirko"
+            target="_blank"
+          >
             <Image src={youtube} alt="youtube" />
           </a>
         </div>
       </div>
-      <div className="flex flex-col gap-12 px-8 mb-12 sm:flex-row">
+      <div className="flex flex-col gap-12 px-8 mb-12 overflow-x-scroll sm:flex-row hide-scrollbar">
         {songs.map((song) => (
           <Song key={song.title} {...song} />
         ))}
@@ -42,7 +45,7 @@ export default function Music() {
         <div className={cn("expanded-container", isExpanded && "expanded")}>
           <div
             className={cn(
-              "flex flex-col gap-12 px-8 mt-12 sm:flex-row",
+              "flex flex-col gap-12 px-8 mt-16 sm:flex-row overflow-x-scroll hide-scrollbar",
               isExpanded && "opacity-100"
             )}
           >

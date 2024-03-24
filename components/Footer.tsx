@@ -28,7 +28,10 @@ export default function Footer() {
         <a href="https://jasamsvemirko.bandcamp.com/" target="_blank">
           bandcamp
         </a>
-        <a href="https://youtube.com" target="_blank">
+        <a
+          href="https://www.youtube.com/@visemanjezauvijek/search?query=svemirko"
+          target="_blank"
+        >
           youtube
         </a>
         <a href="https://www.instagram.com/mismosvemirko/" target="_blank">

@@ -19,6 +19,21 @@ export const songs: Song[] = [
     link: "https://www.youtube.com/watch?v=graOFuZEFs0",
     image: dobar,
   },
+  {
+    title: "Nosi me na duši",
+    link: "https://www.youtube.com/watch?v=T-PucUDwqlg",
+    image: nosi,
+  },
+  {
+    title: "Slučajna cesta",
+    link: "https://www.youtube.com/watch?v=tdSBN1MJKgk",
+    image: cesta,
+  },
+  {
+    title: "Možda nisam dobar",
+    link: "https://www.youtube.com/watch?v=graOFuZEFs0",
+    image: dobar,
+  },
 ];
 
 type Song = {

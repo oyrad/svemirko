@@ -18,7 +18,7 @@ export default function SongExpander({
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center gap-2 py-4 transition-all duration-300 bg-gray-500 cursor-pointer lg:gap-4 lg:py-8 lg:flex-row footer-gradient"
+        className="flex flex-col items-center justify-center gap-1 py-3 transition-all duration-300 bg-gray-500 cursor-pointer lg:gap-4 lg:py-8 lg:flex-row footer-gradient"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {isExpanded ? (
@@ -54,7 +54,7 @@ export default function SongExpander({
           src={arrowDown}
           alt="arrow down"
           className={cn(
-            "block -mb-1 lg:hidden transition-all",
+            "block -mb-2 lg:hidden transition-all",
             isExpanded && "rotate-180"
           )}
         />

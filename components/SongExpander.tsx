@@ -18,7 +18,7 @@ export default function SongExpander({
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center gap-1 py-3 transition-all duration-300 bg-gray-500 cursor-pointer lg:gap-4 lg:py-8 lg:flex-row footer-gradient"
+        className="flex flex-col items-center justify-center gap-1 py-3 text-white transition-all duration-300 bg-black cursor-pointer lg:gap-4 lg:py-8 lg:flex-row"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {isExpanded ? (

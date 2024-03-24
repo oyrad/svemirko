@@ -104,7 +104,10 @@ export default function Header() {
             <Image
               src={logoBlack}
               alt="svemirko logo"
-              onClick={scrollToTop}
+              onClick={() => {
+                scrollToTop();
+                setIsExpanded(false);
+              }}
               className="w-16 cursor-pointer"
             />
             <Image

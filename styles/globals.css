@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
 .footer-gradient {
   background: linear-gradient(
     to right,
@@ -37,14 +45,6 @@
   to {
     opacity: 1;
   }
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hide-scrollbar {
-  scrollbar-width: none;
 }
 
 @media only screen and (max-width: 1024px) {

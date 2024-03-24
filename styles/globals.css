@@ -47,6 +47,10 @@
   }
 }
 
+.logo-gif {
+  background: url("/logos/logo.gif") no-repeat;
+}
+
 @media only screen and (max-width: 1024px) {
   .footer-gradient {
     background: linear-gradient(

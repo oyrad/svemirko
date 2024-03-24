@@ -26,7 +26,7 @@ export default function Hero() {
         className="duration-300 lg:self-end hover:gap-4 transition-gap"
       />
       <div
-        className="absolute bottom-0 flex justify-center w-full py-3 bg-white cursor-pointer lg:py-4 lg:static footer-gradient"
+        className="absolute bottom-0 flex justify-center w-full pb-4 cursor-pointer lg:py-4 lg:static animate-bounce"
         onClick={handleScroll}
       >
         <Image

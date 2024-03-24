@@ -113,7 +113,7 @@ export default function Header() {
               onClick={() => setIsExpanded(false)}
             />
           </div>
-          <ul className="flex flex-col items-end gap-12 mb-8 text-4xl uppercase">
+          <ul className="flex flex-col items-end gap-12 mb-8 text-3xl uppercase">
             <li
               className="cursor-pointer"
               onClick={() => {

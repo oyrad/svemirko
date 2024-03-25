@@ -67,8 +67,11 @@ export default function Header() {
       <Image
         src={logoBlack}
         alt="svemirko logo"
-        onClick={scrollToTop}
-        className="w-16 cursor-pointer lg:w-24"
+        onClick={() => {
+          scrollToTop();
+          setIsExpanded(false);
+        }}
+        className="z-10 w-16 cursor-pointer lg:w-24"
       />
       <nav className="hidden lg:block">
         <ul className="flex gap-8 text-3xl font-semibold text-black uppercase">
@@ -92,33 +95,27 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <Image
-        src={hamburger}
-        alt="open menu"
-        className="cursor-pointer lg:hidden"
-        onClick={() => setIsExpanded(true)}
-      />
+      {isExpanded ? (
+        <Image
+          src={x}
+          alt="open menu"
+          onClick={() => setIsExpanded(false)}
+          className="z-10 ml-auto"
+        />
+      ) : (
+        <Image
+          src={hamburger}
+          alt="open menu"
+          className="cursor-pointer lg:hidden"
+          onClick={() => setIsExpanded(true)}
+        />
+      )}
+
       {isExpanded && (
-        <nav className="absolute top-0 left-0 w-full px-6 py-4 text-black bg-white lg:hidden h-fit">
-          <div className="flex items-center justify-between mb-8">
-            <Image
-              src={logoBlack}
-              alt="svemirko logo"
-              onClick={() => {
-                scrollToTop();
-                setIsExpanded(false);
-              }}
-              className="w-16 cursor-pointer"
-            />
-            <Image
-              src={x}
-              alt="open menu"
-              onClick={() => setIsExpanded(false)}
-            />
-          </div>
+        <nav className="absolute top-0 left-0 w-full px-6 py-4 font-medium text-black bg-white pt-28 lg:hidden">
           <ul className="flex flex-col items-end gap-12 mb-8 text-3xl uppercase">
             <li
-              className="cursor-pointer"
+              className="pr-2 border-r-4 cursor-pointer border-svemirko-green"
               onClick={() => {
                 scrollToSection("tourDates");
                 setIsExpanded(false);
@@ -127,7 +124,7 @@ export default function Header() {
               tour
             </li>
             <li
-              className="cursor-pointer"
+              className="pr-2 border-r-4 cursor-pointer border-svemirko-red"
               onClick={() => {
                 scrollToSection("music");
                 setIsExpanded(false);
@@ -136,7 +133,7 @@ export default function Header() {
               glazba
             </li>
             <li
-              className="cursor-pointer"
+              className="pr-2 border-r-4 cursor-pointer border-svemirko-blue"
               onClick={() => {
                 scrollToSection("contact");
                 setIsExpanded(false);

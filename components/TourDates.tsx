@@ -7,7 +7,7 @@ export default function TourDates() {
     <section>
       <Image src={marko} alt="marko" className="w-full" />
       <div
-        className="px-8 pt-12 pb-20 lg:text-center lg:px-0 tour-gradient"
+        className="px-8 pt-12 pb-12 lg:text-center lg:px-0 tour-gradient"
         id="tourDates"
       >
         <p className="mb-12 text-7xl lg:hidden">Tour 2024</p>
@@ -22,6 +22,12 @@ export default function TourDates() {
             </p>
           </div>
         ))}
+      </div>
+      <div className="grid w-full h-16 grid-cols-4 lg:h-28">
+        <div className="bg-svemirko-yellow"></div>
+        <div className="bg-svemirko-red"></div>
+        <div className="bg-svemirko-green"></div>
+        <div className="bg-svemirko-blue"></div>
       </div>
     </section>
   );

@@ -61,17 +61,6 @@ export default function Music() {
           </div>
         </div>
       )}
-      {/*       <div
-        className={cn(
-          "grid w-full h-20 grid-cols-4 lg:h-28",
-          isExpanded && "mt-12"
-        )}
-      >
-        <div className="bg-svemirko-yellow"></div>
-        <div className="bg-svemirko-red"></div>
-        <div className="bg-svemirko-green"></div>
-        <div className="bg-svemirko-blue"></div>
-      </div> */}
     </section>
   );
 }

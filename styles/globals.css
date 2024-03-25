@@ -24,10 +24,6 @@
   );
 }
 
-.tour-gradient {
-  background: linear-gradient(#000, #000, #000, #000040);
-}
-
 .expanded-container {
   animation-duration: 0.5s;
   animation-timing-function: ease-out;

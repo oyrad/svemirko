@@ -15,7 +15,7 @@ export default function Hero() {
     <div className="w-full h-svh lg:h-screen logo-gif">
       <div className="flex flex-col items-center justify-center h-svh lg:items-start lg:h-auto lg:absolute lg:bottom-0 lg:w-full">
         <div
-          className="absolute bottom-0 flex justify-center w-full py-4 pt-5 cursor-pointer lg:static"
+          className="absolute bottom-0 flex justify-center w-full py-4 pt-5 cursor-pointer lg:static bg-hero-background"
           onClick={handleScroll}
         >
           <Image

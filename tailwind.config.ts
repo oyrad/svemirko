@@ -18,6 +18,7 @@ const config: Config = {
         "svemirko-yellow": "#FFAE2D",
         "svemirko-red": "#E4024E",
         "svemirko-blue": "#2A96BF",
+        "hero-background": "#F5F6EE",
       },
     },
   },

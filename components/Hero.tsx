@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="w-full h-screen logo-gif">
+    <div className="w-full h-svh lg:h-screen logo-gif">
       <div className="flex flex-col items-center justify-center h-svh lg:items-start lg:h-auto lg:absolute lg:bottom-0 lg:w-full">
         <div
           className="absolute bottom-0 flex justify-center w-full py-4 pt-5 bg-black cursor-pointer lg:static"

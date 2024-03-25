@@ -10,7 +10,7 @@ type SongProps = {
 
 export default function Song({ title, link, image }: SongProps) {
   return (
-    <a href={link} target="_blank" className="min-w-[28%]">
+    <a href={link} target="_blank">
       <Image src={image} alt="title" className="w-full mb-2" />
       <div className="flex items-center gap-4">
         <p className="text-xl">{title}</p>

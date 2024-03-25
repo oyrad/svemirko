@@ -17,31 +17,31 @@ export default function Music() {
     <section id="music" className="text-black bg-white">
       <div className="flex flex-col items-center justify-between gap-12 p-20 lg:gap-0 lg:flex-row">
         <p className="text-6xl uppercase lg:text-8xl">glazba</p>
-        <div className="flex gap-12 lg:gap-20">
+        <div className="flex gap-8">
           <a
             href="https://jasamsvemirko.bandcamp.com/"
             target="_blank"
-            className="duration-200 hover:scale-110 transform-all"
+            className="flex justify-center w-16 duration-200 lg:justify-end sm:w-28 hover:scale-110 transform-all"
           >
             <Image src={bandcamp} alt="bandcamp" />
           </a>
           <a
             href="https://open.spotify.com/artist/7f3cnDkg5S64e0adAlnF5z"
             target="_blank"
-            className="duration-200 hover:scale-110 transform-all"
+            className="flex justify-center w-16 duration-200 lg:justify-end sm:w-28 hover:scale-110 transform-all"
           >
             <Image src={spotify} alt="spotify" />
           </a>
           <a
             href="https://www.youtube.com/@visemanjezauvijek/search?query=svemirko"
             target="_blank"
-            className="duration-200 hover:scale-110 transform-all"
+            className="flex justify-center w-16 duration-200 lg:justify-end sm:w-28 hover:scale-110 transform-all"
           >
             <Image src={youtube} alt="youtube" />
           </a>
         </div>
       </div>
-      <div className="flex flex-col gap-12 px-8 mb-12 overflow-x-scroll sm:flex-row hide-scrollbar">
+      <div className="grid grid-cols-1 gap-12 px-8 mb-12 lg:px-20 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {songs.map((song) => (
           <Song key={song.title} {...song} />
         ))}
@@ -51,7 +51,7 @@ export default function Music() {
         <div className={cn("expanded-container", isExpanded && "expanded")}>
           <div
             className={cn(
-              "flex flex-col gap-12 px-8 mt-16 sm:flex-row overflow-x-scroll hide-scrollbar",
+              "grid grid-cols-1 gap-12 px-8 mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
               isExpanded && "opacity-100"
             )}
           >
@@ -61,6 +61,17 @@ export default function Music() {
           </div>
         </div>
       )}
+      {/*       <div
+        className={cn(
+          "grid w-full h-20 grid-cols-4 lg:h-28",
+          isExpanded && "mt-12"
+        )}
+      >
+        <div className="bg-svemirko-yellow"></div>
+        <div className="bg-svemirko-red"></div>
+        <div className="bg-svemirko-green"></div>
+        <div className="bg-svemirko-blue"></div>
+      </div> */}
     </section>
   );
 }

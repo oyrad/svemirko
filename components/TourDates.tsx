@@ -4,9 +4,12 @@ import Image from "next/image";
 
 export default function TourDates() {
   return (
-    <section id="tourDates">
-      <Image src={marko} alt="marko" className="w-full mb-12" />
-      <div className="px-8 pb-20 lg:text-center lg:px-0 tour-gradient">
+    <section>
+      <Image src={marko} alt="marko" className="w-full" />
+      <div
+        className="px-8 pt-12 pb-20 lg:text-center lg:px-0 tour-gradient"
+        id="tourDates"
+      >
         <p className="mb-12 text-7xl lg:hidden">Tour 2024</p>
         <p className="hidden mb-12 lg:block text-9xl">
           Tour <br /> 2024

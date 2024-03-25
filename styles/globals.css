@@ -48,7 +48,7 @@
 }
 
 .logo-gif {
-  background-image: url("/logos/logo.gif");
+  background-image: url("/logos/logo-desktop.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -79,5 +79,9 @@
       #80deea 75%,
       #4dd0e1 100%
     );
+  }
+
+  .logo-gif {
+    background-image: url("/logos/logo-mobile.gif");
   }
 }

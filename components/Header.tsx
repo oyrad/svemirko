@@ -71,21 +71,21 @@ export default function Header() {
         className="w-16 cursor-pointer lg:w-24"
       />
       <nav className="hidden lg:block">
-        <ul className="flex gap-8 text-3xl font-semibold uppercase">
+        <ul className="flex gap-8 text-3xl font-semibold text-black uppercase">
           <li
-            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
+            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-green"
             onClick={() => scrollToSection("tourDates")}
           >
             tour
           </li>
           <li
-            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
+            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-red"
             onClick={() => scrollToSection("music")}
           >
             glazba
           </li>
           <li
-            className="px-6 py-2 text-black transition-all duration-100 cursor-pointer hover:text-white hover:bg-black"
+            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-blue"
             onClick={() => scrollToSection("contact")}
           >
             kontakt

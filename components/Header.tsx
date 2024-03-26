@@ -2,7 +2,8 @@
 
 import logoWhite from "@/public/logos/logo-white.svg";
 import logoBlack from "@/public/logos/logo-black.svg";
-import hamburger from "@/public/icons/hamburger.svg";
+import hamburgerWhite from "@/public/icons/hamburger-white.svg";
+import hamburgerBlack from "@/public/icons/hamburger-black.svg";
 import x from "@/public/icons/x.svg";
 
 import { useEffect, useState } from "react";
@@ -60,12 +61,12 @@ export default function Header() {
     <header
       className={cn(
         "flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
-        prevScrollPosition > 50 && visible && "bg-white shadow-md",
+        prevScrollPosition > 50 && visible && "bg-black shadow-md",
         !visible && "-translate-y-full"
       )}
     >
       <Image
-        src={logoBlack}
+        src={logoWhite}
         alt="svemirko logo"
         onClick={() => {
           scrollToTop();
@@ -74,45 +75,70 @@ export default function Header() {
         className="z-10 w-16 cursor-pointer lg:w-24"
       />
       <nav className="hidden lg:block">
-        <ul className="flex gap-8 text-3xl font-semibold text-black uppercase">
+        <ul
+          className={cn(
+            "flex gap-8 text-3xl font-semibold text-black uppercase",
+            prevScrollPosition > 50 && visible && "text-white"
+          )}
+        >
           <li
-            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-green"
+            className={cn(
+              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-green",
+              prevScrollPosition > 50 && visible && "text-white"
+            )}
             onClick={() => scrollToSection("tourDates")}
           >
             tour
           </li>
           <li
-            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-red"
+            className={cn(
+              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-red",
+              prevScrollPosition > 50 && visible && "text-white"
+            )}
             onClick={() => scrollToSection("music")}
           >
             glazba
           </li>
           <li
-            className="px-6 py-2 transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-blue"
+            className={cn(
+              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-blue",
+              prevScrollPosition > 50 && visible && "text-white"
+            )}
             onClick={() => scrollToSection("contact")}
           >
             kontakt
           </li>
         </ul>
       </nav>
-      {isExpanded ? (
-        <Image
-          src={x}
-          alt="open menu"
-          onClick={() => setIsExpanded(false)}
-          className="z-10 ml-auto"
-        />
-      ) : (
-        <Image
-          src={hamburger}
-          alt="open menu"
-          className="cursor-pointer lg:hidden"
-          onClick={() => setIsExpanded(true)}
-        />
-      )}
-
+      <Image
+        src={hamburgerWhite}
+        alt="open menu"
+        className="cursor-pointer lg:hidden"
+        onClick={() => setIsExpanded(true)}
+      />
       {isExpanded && (
-        <nav className="absolute top-0 left-0 w-full px-6 py-4 font-medium text-black bg-white pt-28 lg:hidden">
+        <nav
+          className={cn(
+            "absolute top-0 left-0 w-full px-6 py-4 font-medium text-black bg-white lg:hidden"
+          )}
+        >
+          <div className="flex justify-between mb-12">
+            <Image
+              src={logoBlack}
+              alt="svemirko logo"
+              onClick={() => {
+                scrollToTop();
+                setIsExpanded(false);
+              }}
+              className="z-10 w-16 cursor-pointer lg:w-24"
+            />
+            <Image
+              src={x}
+              alt="open menu"
+              onClick={() => setIsExpanded(false)}
+            />
+          </div>
+
           <ul className="flex flex-col items-end gap-12 mb-8 text-3xl uppercase">
             <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-green"

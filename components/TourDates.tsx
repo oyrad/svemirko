@@ -1,11 +1,11 @@
 import { Gig, gigs } from "@/data/gigs";
-import marko from "@/public/images/marko.jpg";
+import band from "@/public/images/band.webp";
 import Image from "next/image";
 
 export default function TourDates() {
   return (
     <section>
-      <Image src={marko} alt="marko" className="w-full" />
+      <Image src={band} alt="band" className="w-full" />
       <div
         className="px-8 pt-12 pb-12 lg:text-center lg:px-0 tour-gradient"
         id="tourDates"

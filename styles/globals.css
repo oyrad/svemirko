@@ -44,7 +44,7 @@
 }
 
 .logo-gif {
-  background-image: url("/logos/logo-desktop.gif");
+  background-image: url("/images/hero-desktop.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -78,6 +78,6 @@
   }
 
   .logo-gif {
-    background-image: url("/logos/logo-mobile.gif");
+    background-image: url("/images/hero-mobile.webp");
   }
 }

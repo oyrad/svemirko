@@ -15,9 +15,19 @@ export const gigs: Gig[] = [
     city: "Zagreb",
   },
   {
+    date: "7. 6.",
+    venue: "KSB",
+    city: "Banja Luka",
+  },
+  {
+    date: "8. 6.",
+    venue: "Kvirhana",
+    city: "Sarajevo",
+  },
+  {
     date: "25. 5.",
     venue: "MC Patriot",
-    city: "Slovenske konjice",
+    city: "Slovenske Konjice",
   },
   {
     date: "15. 6.",

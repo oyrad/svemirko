@@ -1,10 +1,11 @@
+import Image from "next/image";
+import contactImage from "@/public/images/contact.webp";
+
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="grid grid-cols-2 px-8 text-xl text-black bg-white lg:px-20 py-44 lg:text-3xl"
-    >
-      <div>
+    <section id="contact">
+      <Image src={contactImage} alt="Contact" />
+      <div className="px-8 py-20 text-xl lg:px-20 lg:text-3xl">
         <p className="mb-16">
           Svemirko je sve što ste od jednog pop benda tražili i dobili. Savršeno
           uravnotežen spoj osjećaja, vještine i kvalitete.

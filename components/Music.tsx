@@ -6,7 +6,7 @@ import bandcamp from "@/public/logos/bandcamp.svg";
 import spotify from "@/public/logos/spotify.svg";
 import youtube from "@/public/logos/youtube.svg";
 import Song from "./Song";
-import { songs } from "@/data/songs";
+import { albums } from "@/data/music";
 import SongExpander from "./SongExpander";
 import { cn } from "@/lib/utils";
 
@@ -41,12 +41,12 @@ export default function Music() {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-12 px-8 mb-12 lg:px-20 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {songs.map((song) => (
-          <Song key={song.title} {...song} />
+      <div className="grid grid-cols-1 gap-8 px-8 mb-12 xl:gap-16 lg:px-20 sm:grid-cols-2 lg:grid-cols-3">
+        {albums.map((album) => (
+          <Song key={album.title} {...album} />
         ))}
       </div>
-      <SongExpander isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      {/*       <SongExpander isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
       {isExpanded && (
         <div className={cn("expanded-container", isExpanded && "expanded")}>
           <div
@@ -55,12 +55,12 @@ export default function Music() {
               isExpanded && "opacity-100 pb-12"
             )}
           >
-            {songs.map((song) => (
-              <Song key={song.title} {...song} />
+            {albums.map((album) => (
+              <Song key={album.title} {...album} />
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

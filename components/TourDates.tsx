@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function TourDates() {
   return (
-    <section>
-      <Image src={band} alt="band" className="w-full" />
+    <section id="tourDates">
+      <Image src={band} alt="band" className="w-full lg:hidden" />
       <div
         className="px-8 pt-12 pb-12 lg:text-center lg:px-0 tour-gradient"
         id="tourDates"
@@ -23,7 +23,7 @@ export default function TourDates() {
           </div>
         ))}
       </div>
-      <div className="grid w-full h-16 grid-cols-4 lg:h-28">
+      <div className="grid w-full h-12 grid-cols-4 lg:h-24">
         <div className="bg-svemirko-yellow"></div>
         <div className="bg-svemirko-red"></div>
         <div className="bg-svemirko-green"></div>

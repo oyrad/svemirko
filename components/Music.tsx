@@ -7,8 +7,6 @@ import spotify from "@/public/logos/spotify.svg";
 import youtube from "@/public/logos/youtube.svg";
 import Song from "./Song";
 import { albums } from "@/data/music";
-import SongExpander from "./SongExpander";
-import { cn } from "@/lib/utils";
 
 export default function Music() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,7 +39,7 @@ export default function Music() {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 px-8 pb-12 xl:gap-16 lg:px-20 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 px-8 pb-12 xl:gap-16 lg:px-20 lg:grid-cols-3">
         {albums.map((album) => (
           <Song key={album.title} {...album} />
         ))}

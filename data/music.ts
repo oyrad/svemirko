@@ -1,7 +1,4 @@
 import { StaticImageData } from "next/image";
-import nosi from "@/public/images/nosi-me.png";
-import cesta from "@/public/images/sl-cesta.png";
-import dobar from "@/public/images/dobar.png";
 
 import skalamerija from "@/public/images/skalamerija.jpeg";
 import tunguzija from "@/public/images/tunguzija.jpeg";
@@ -19,7 +16,7 @@ export const albums: Song[] = [
     image: tunguzija,
   },
   {
-    title: "Skalamerija",
+    title: "Vanilija",
     link: "https://www.youtube.com/watch?v=cFsYDMJBwsI&t=943s",
     image: vanilija,
   },

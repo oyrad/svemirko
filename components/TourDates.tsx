@@ -5,7 +5,12 @@ import Image from "next/image";
 export default function TourDates() {
   return (
     <section id="tourDates">
-      <Image src={band} alt="band" className="w-full lg:hidden" />
+      <Image
+        src={band}
+        alt="band"
+        className="w-full lg:hidden"
+        placeholder="blur"
+      />
       <div
         className="px-8 pt-12 pb-12 lg:text-center lg:px-0 tour-gradient"
         id="tourDates"

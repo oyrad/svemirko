@@ -3,7 +3,6 @@
 import logoWhite from "@/public/logos/logo-white.svg";
 import logoBlack from "@/public/logos/logo-black.svg";
 import hamburgerWhite from "@/public/icons/hamburger-white.svg";
-import hamburgerBlack from "@/public/icons/hamburger-black.svg";
 import x from "@/public/icons/x.svg";
 
 import { useEffect, useState } from "react";

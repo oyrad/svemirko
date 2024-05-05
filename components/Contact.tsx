@@ -7,7 +7,12 @@ import contactThree from "@/public/images/contact-3.webp";
 export default function Contact() {
   return (
     <section id="contact">
-      <Image src={contactOne} alt="Contact" className="lg:hidden" />
+      <Image
+        src={contactOne}
+        alt="Contact"
+        className="lg:hidden"
+        placeholder="blur"
+      />
 
       <div className="flex">
         <div className="px-8 py-20 text-xl lg:px-20 lg:text-3xl">
@@ -20,13 +25,33 @@ export default function Contact() {
             visemanjezauvijek@gmail.com
           </a>
         </div>
-        <Image src={contact} alt="Contact" className="hidden w-1/3 lg:block" />
+        <Image
+          src={contact}
+          alt="Contact"
+          className="hidden w-1/3 lg:block"
+          placeholder="blur"
+        />
       </div>
       <Image src={contactTwo} alt="Contact" className="lg:hidden" />
       <div className="hidden lg:flex">
-        <Image src={contactOne} alt="Contact" className="w-1/3" />
-        <Image src={contactTwo} alt="Contact" className="w-1/3" />
-        <Image src={contactThree} alt="Contact" className="w-1/3" />
+        <Image
+          src={contactOne}
+          alt="Contact"
+          className="w-1/3"
+          placeholder="blur"
+        />
+        <Image
+          src={contactTwo}
+          alt="Contact"
+          className="w-1/3"
+          placeholder="blur"
+        />
+        <Image
+          src={contactThree}
+          alt="Contact"
+          className="w-1/3"
+          placeholder="blur"
+        />
       </div>
     </section>
   );

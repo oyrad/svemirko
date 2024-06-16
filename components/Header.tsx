@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import logoWhite from "@/public/logos/logo-white.svg";
-import logoBlack from "@/public/logos/logo-black.svg";
-import hamburgerWhite from "@/public/icons/hamburger-white.svg";
-import x from "@/public/icons/x.svg";
+import logoWhite from '@/public/logos/logo-white.svg';
+import logoBlack from '@/public/logos/logo-black.svg';
+import hamburgerWhite from '@/public/icons/hamburger-white.svg';
+import x from '@/public/icons/x.svg';
 
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,14 +28,15 @@ export default function Header() {
       const currentScrollPosition = window.scrollY;
 
       setVisible(
-        currentScrollPosition < 10 || currentScrollPosition < prevScrollPosition
+        currentScrollPosition < 10 ||
+          currentScrollPosition < prevScrollPosition,
       );
 
       setPrevScrollPosition(currentScrollPosition);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPosition, visible, isExpanded, isScrollingDueToClick]);
 
   function scrollToSection(sectionId: string) {
@@ -44,7 +45,7 @@ export default function Header() {
     if (section) {
       setIsScrollingDueToClick(true);
       setVisible(false);
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: 'smooth' });
       setTimeout(() => setIsScrollingDueToClick(false), 1000);
     }
   }
@@ -52,16 +53,16 @@ export default function Header() {
   function scrollToTop() {
     window.scroll({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
   return (
     <header
       className={cn(
-        "flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200",
-        prevScrollPosition > 50 && visible && "bg-black shadow-md",
-        !visible && "-translate-y-full"
+        'flex justify-between text-white items-center px-6 lg:px-20 py-4 lg:py-6 fixed top-0 left-0 w-full z-10 transition-all duration-200',
+        prevScrollPosition > 50 && visible && 'bg-black shadow-md',
+        !visible && '-translate-y-full',
       )}
     >
       <Image
@@ -76,34 +77,43 @@ export default function Header() {
       <nav className="hidden lg:block">
         <ul
           className={cn(
-            "flex gap-8 text-3xl font-semibold text-black uppercase",
-            prevScrollPosition > 50 && visible && "text-white"
+            'flex gap-8 text-3xl font-semibold text-black uppercase',
+            prevScrollPosition > 50 && visible && 'text-white',
           )}
         >
           <li
             className={cn(
-              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-green",
-              prevScrollPosition > 50 && visible && "text-white"
+              'px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-yellow',
+              prevScrollPosition > 50 && visible && 'text-white',
             )}
-            onClick={() => scrollToSection("tourDates")}
-          >
-            tour
-          </li>
-          <li
-            className={cn(
-              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-red",
-              prevScrollPosition > 50 && visible && "text-white"
-            )}
-            onClick={() => scrollToSection("music")}
+            onClick={() => scrollToSection('music')}
           >
             glazba
           </li>
           <li
             className={cn(
-              "px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-blue",
-              prevScrollPosition > 50 && visible && "text-white"
+              'px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-red',
+              prevScrollPosition > 50 && visible && 'text-white',
             )}
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection('shop')}
+          >
+            shop
+          </li>
+          <li
+            className={cn(
+              'px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-green',
+              prevScrollPosition > 50 && visible && 'text-white',
+            )}
+            onClick={() => scrollToSection('tourDates')}
+          >
+            tour
+          </li>
+          <li
+            className={cn(
+              'px-6 py-2 text-white transition-all duration-100 cursor-pointer hover:text-white hover:bg-svemirko-blue',
+              prevScrollPosition > 50 && visible && 'text-white',
+            )}
+            onClick={() => scrollToSection('contact')}
           >
             kontakt
           </li>
@@ -118,7 +128,7 @@ export default function Header() {
       {isExpanded && (
         <nav
           className={cn(
-            "absolute top-0 left-0 w-full px-6 py-4 font-medium text-black bg-white lg:hidden"
+            'absolute top-0 left-0 w-full px-6 py-4 font-medium text-black bg-white lg:hidden',
           )}
         >
           <div className="flex justify-between mb-12">
@@ -142,7 +152,7 @@ export default function Header() {
             <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-green"
               onClick={() => {
-                scrollToSection("tourDates");
+                scrollToSection('tourDates');
                 setIsExpanded(false);
               }}
             >
@@ -151,7 +161,7 @@ export default function Header() {
             <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-red"
               onClick={() => {
-                scrollToSection("music");
+                scrollToSection('music');
                 setIsExpanded(false);
               }}
             >
@@ -160,7 +170,7 @@ export default function Header() {
             <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-blue"
               onClick={() => {
-                scrollToSection("contact");
+                scrollToSection('contact');
                 setIsExpanded(false);
               }}
             >

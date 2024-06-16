@@ -25,14 +25,35 @@
 }
 
 .tour-background {
-    background: linear-gradient(#000, #000, #000, #000, #000044);
+    background: linear-gradient(#000, #000, #000, #000, #000033);
 }
 
-.logo-gif {
-    background-image: url("/images/band.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: sparkle 1s infinite;
+    transition: opacity 2s ease-in-out;
+}
+
+.star-clicked {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes sparkle {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 1024px) {

@@ -3,81 +3,66 @@
 @tailwind utilities;
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .hide-scrollbar {
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 .footer-gradient {
-  background: linear-gradient(
-    to right,
-    #ff9a9e 0%,
-    #ffabb9 15%,
-    #ffc3d7 30%,
-    #b2ebf2 50%,
-    #80deea 60%,
-    #4dd0e1 70%,
-    #26c6da 80%,
-    #00bcd4 90%
-  );
+    background: linear-gradient(
+            to right,
+            #ff9a9e 0%,
+            #ffabb9 15%,
+            #ffc3d7 30%,
+            #b2ebf2 50%,
+            #80deea 60%,
+            #4dd0e1 70%,
+            #26c6da 80%,
+            #00bcd4 90%
+    );
 }
 
-.expanded-container {
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-.expanded {
-  animation-name: expand;
-}
-
-@keyframes expand {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.tour-background {
+    background: linear-gradient(#000, #000, #000, #000, #000044);
 }
 
 .logo-gif {
-  background-image: url("/images/band.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("/images/band.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media only screen and (max-width: 1024px) {
-  .footer-gradient {
-    background: linear-gradient(
-      to right,
-      #ffabb9 0%,
-      #ffc3d7 15%,
-      #ffd4e9 30%,
-      #b2ebf2 65%,
-      #80deea 80%,
-      #4dd0e1 90%,
-      #26c6da 100%
-    );
-  }
+    .footer-gradient {
+        background: linear-gradient(
+                to right,
+                #ffabb9 0%,
+                #ffc3d7 15%,
+                #ffd4e9 30%,
+                #b2ebf2 65%,
+                #80deea 80%,
+                #4dd0e1 90%,
+                #26c6da 100%
+        );
+    }
 }
 
 @media only screen and (max-width: 768px) {
-  .footer-gradient {
-    background: linear-gradient(
-      to right,
-      #ffabb9 0%,
-      #ffc3d7 25%,
-      #b2ebf2 50%,
-      #80deea 75%,
-      #4dd0e1 100%
-    );
-  }
+    .footer-gradient {
+        background: linear-gradient(
+                to right,
+                #ffabb9 0%,
+                #ffc3d7 25%,
+                #b2ebf2 50%,
+                #80deea 75%,
+                #4dd0e1 100%
+        );
+    }
 
-  .logo-gif {
-    background-image: url("/images/hero-mobile.webp");
-  }
+    .logo-gif {
+        background-image: url("/images/hero-mobile.webp");
+    }
 }

@@ -12,10 +12,21 @@ const desktopImages = [
 const mobileImages = ['/images/hero-mobile.webp'];
 
 export default function Hero() {
-  const [images, setImages] = useState<string[]>(() =>
-    window.innerWidth > 1024 ? desktopImages : mobileImages,
-  );
+  const [images, setImages] = useState<string[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const updateImages = () => {
+      setImages(window.innerWidth > 1024 ? desktopImages : mobileImages);
+    };
+
+    if (typeof window !== 'undefined') {
+      updateImages();
+    }
+
+    window.addEventListener('resize', updateImages);
+    return () => window.removeEventListener('resize', updateImages);
+  }, []);
 
   useEffect(() => {
     if (images.length > 0) {

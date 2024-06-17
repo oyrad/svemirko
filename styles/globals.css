@@ -25,7 +25,11 @@
 }
 
 .tour-background {
-    background: linear-gradient(#000, #000, #000, #000, #000033);
+    background: linear-gradient(#000, #000, #000, #000, #000022);
+}
+
+.contact-background {
+    background: linear-gradient(#000022, #000, #000, #000);
 }
 
 .star {

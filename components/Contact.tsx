@@ -6,22 +6,20 @@ import contactThree from '@/public/images/contact-3.webp';
 export default function Contact() {
   return (
     <section id="contact">
+      <div className="px-8 py-20 text-xl lg:px-20 lg:text-3xl bg-black w-full contact-background">
+        <p className="mb-2">Booking:</p>
+        <a href="mailto:visemanjezauvijek@gmail.com">
+          visemanjezauvijek@gmail.com
+        </a>
+      </div>
       <Image
         src={contactOne}
         alt="Contact"
         className="lg:hidden"
         placeholder="blur"
       />
-
-      <div className="flex">
-        <div className="px-8 py-20 text-xl lg:px-20 lg:text-3xl bg-black w-full">
-          <p className="mb-2">Booking:</p>
-          <a href="mailto:visemanjezauvijek@gmail.com">
-            visemanjezauvijek@gmail.com
-          </a>
-        </div>
-      </div>
       <Image src={contactTwo} alt="Contact" className="lg:hidden" />
+
       <div className="hidden lg:flex">
         <Image
           src={contactOne}

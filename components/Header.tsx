@@ -150,6 +150,24 @@ export default function Header() {
 
           <ul className="flex flex-col items-end gap-12 mb-8 text-3xl uppercase">
             <li
+              className="pr-2 border-r-4 cursor-pointer border-svemirko-yellow"
+              onClick={() => {
+                scrollToSection('music');
+                setIsExpanded(false);
+              }}
+            >
+              glazba
+            </li>
+            <li
+              className="pr-2 border-r-4 cursor-pointer border-svemirko-red"
+              onClick={() => {
+                scrollToSection('shop');
+                setIsExpanded(false);
+              }}
+            >
+              shop
+            </li>
+            <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-green"
               onClick={() => {
                 scrollToSection('tourDates');
@@ -157,15 +175,6 @@ export default function Header() {
               }}
             >
               tour
-            </li>
-            <li
-              className="pr-2 border-r-4 cursor-pointer border-svemirko-red"
-              onClick={() => {
-                scrollToSection('music');
-                setIsExpanded(false);
-              }}
-            >
-              glazba
             </li>
             <li
               className="pr-2 border-r-4 cursor-pointer border-svemirko-blue"

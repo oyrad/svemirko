@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Music from '@/components/Music';
 import TourDates from '@/components/TourDates';
 import Contact from '@/components/Contact';
+import Shop from '@/components/Shop';
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <Hero />
       <div>
         <Music />
+
+        <Shop />
 
         <div className="grid w-full h-12 grid-cols-4 lg:h-20">
           <div className="bg-svemirko-yellow"></div>
